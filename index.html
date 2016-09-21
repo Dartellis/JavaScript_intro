@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Intro Exercise</title>
+</head>
+<body>
+	<div"></div>
+	<script>
+	
+		console.log("Problem 1: Body Mass Index " + f);
+
+		var weightPounds = prompt("Enter Weight in Pounds: ");
+		alert("Enter Height in Feet Followed by Inches");
+
+		var heightFeet = prompt("Feet: ");
+		var heightInches = prompt("Inches: ");
+
+		var heightMeters = (heightFeet * 0.3048) + (heightInches * 0.0254);
+		var weightKilos = weightPounds * 0.453592;
+
+		/* Rounded to nearest hundreth */
+		var bmi = (Math.round((weightKilos / (heightMeters * heightMeters)) * 100)) / 100;
+
+		console.log("Your BMI is: " + bmi);
+
+		console.log("Problem 2: Temperature");
+
+		var c = prompt("Enter temperature in Celcius");
+
+		var f = c / (5/9) + 32;
+
+		/* Rounded to nearest hundreth */
+		f = Math.round(f * 100) / 100;
+
+		console.log("Temperature in Fehrenheit: " + f);
+
+		console.log("Problem 3: Average Test Score \n Enter 5 test scores: ");
+
+		var testScores = [5];
+		for (i = 0; i<5; i++){
+			string = "Enter Test Score " + (i+1);
+
+			testScores[i] = prompt(string);
+		}
+		
+		var avg = 0;
+		for (i = 0; i<5; i++){
+			avg += parseInt(testScores[i]);
+		}
+
+		/* Rounded to nearest integer */
+		avg = Math.round(avg/5);
+
+		console.log("Average test score: " + avg);
+
+	</script>
+</body>
+</html>
